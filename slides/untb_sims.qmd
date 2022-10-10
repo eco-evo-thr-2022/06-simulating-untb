@@ -1,0 +1,108 @@
+---
+title: "Simulating UNTB"
+author: "Renata Diaz"
+format:
+  revealjs:
+    theme: blood
+    pdf-max-pages-per-slide: 1
+    self-contained: true
+editor: source
+---
+
+```{=html}
+<!-- Learning goals:
+
+* Refresher on the "rules" of neutral theory
+* Walk through use of roleShiny to simulate neutral theory
+
+--->
+```
+```{r, echo = F}
+
+library(emoji)
+
+illustrateNeutral <-function() {
+  
+  (paste0(emoji("dice"), emoji("leaves"), emoji("computer")))
+  
+}
+
+```
+
+## The Neutral Theory of Biodiversity in R
+
+|                            |                                                                                                              |
+|:---------------------------:|:-----------------:|
+| ![](images/analog_sim.png) | ![](https://raw.githubusercontent.com/role-model/role-model.github.io/master/img/role_logo.png){width="300"} |
+
+##
+
+## Remember the rules?
+
+## 
+
+![](images/comm_anno.jpg)
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community dies `r emoji("death")`
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community dies `r emoji("death")`
+    -   P(`r emoji("death")`) = $\frac{1}{J}$
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community **dies** `r emoji("death")`
+    -   P(`r emoji("death")`) = $\frac{1}{J}$
+2.  They are replaced by a new individual through:
+    -   **birth** `r emoji("confetti")` or **immigration** `r emoji("compass")`
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community **dies** `r emoji("death")`
+    -   P(`r emoji("death")`) = $\frac{1}{J}$
+2.  They are replaced by a new individual through:
+    -   **birth** `r emoji("confetti")` or **immigration** `r emoji("compass")`
+    -   P(`r emoji("confetti")`) + P(`r emoji("compass")`) = 1
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community **dies** `r emoji("death")`
+    -   P(`r emoji("death")`) = $\frac{1}{J}$
+2.  They are replaced by a new individual through:
+    -   **birth** `r emoji("confetti")` or **immigration** `r emoji("compass")`
+    -   P(`r emoji("confetti")`) + P(`r emoji("compass")`) = 1
+3.  Occasionally, **speciation** `r emoji("sparkles")` occurs
+
+## In each time step...
+
+1.  A `r emoji("die")` individual from the local community **dies** `r emoji("death")`
+    -   P(`r emoji("death")`) = $\frac{1}{J}$
+2.  They are replaced by a new individual through:
+    -   **birth** `r emoji("confetti")` or **immigration** `r emoji("compass")`
+    -   P(`r emoji("confetti")`) + P(`r emoji("compass")`) = 1
+3.  Occasionally, **speciation** `r emoji("sparkles")` occurs
+    -   P(`r emoji("sparkles")`) \<\< 1
+
+## 
+
+![](images/analog_sim.png)
+
+## 
+
+![](images/silico_sim.png)
+
+## 
+
+|                                                                                                                               |                                                                                  |
+|-------------------------------------------|-----------------------------|
+| ![](https://raw.githubusercontent.com/role-model/role-model.github.io/master/img/role_logo.png){fig-align="left" width="400"} | ![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/shiny.png) |
+
+```{r, echo = T, eval = F}
+
+remotes::install_github("role-model/roleR")
+remotes::install_github("role-model/roleShiny")
+
+```
