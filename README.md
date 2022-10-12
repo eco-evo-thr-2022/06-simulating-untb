@@ -9,7 +9,8 @@ Click the image below to check out the video about GitHub!
 Here's how to install the RoLE shiny app:
 
 ```
-devtools::install_github('role-model/roleShiny')
+remotes::install_github('role-model/roleR')
+remotes::install_github('role-model/roleShiny')
 ```
 
 Then run the app:
